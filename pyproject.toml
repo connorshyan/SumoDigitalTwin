@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sumo-digital-twin"
+version = "1.0.0"
+description = "A Digital Twin Framework for Performance Monitoring and Strategy Evaluation in Autonomous Sumo Robots Using Simulation and Data Analytics"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Kaung Htet Shyan, Master of Data Science (MDS) at Universiti Malaya (UM)" }
+]
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scipy>=1.12.0",
+    "scikit-learn>=1.4.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "plotly>=5.18.0",
+    "streamlit>=1.31.0",
+    "tqdm>=4.66.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "nbformat>=5.9.0",
+    "nbconvert>=7.14.0",
+    "pyarrow>=14.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["config", "environment", "data_pipeline", "models", "app"]

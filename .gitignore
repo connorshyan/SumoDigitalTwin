@@ -1,0 +1,26 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Streamlit Local Secrets
+.streamlit/secrets.toml
+
+# Large Datasets (> 100 MB files that exceed GitHub limits)
+data/raw/*.parquet
+data/processed/*.parquet
+data/agent/*.parquet
+data/observer/*.parquet
+data/dt/*.json
+data/dt/*.pkl
